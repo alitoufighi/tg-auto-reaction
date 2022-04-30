@@ -17,7 +17,10 @@ if not (victim_ids or group_ids):
     filters.user(list(map(int, victim_ids.split(','))))
 )
 async def react(_, message):
-    await message.react(emoji='💩')
+    try:
+        await message.react(emoji='💩')
+    except Exception as e:
+        print(e)
 
 
 app.run()
