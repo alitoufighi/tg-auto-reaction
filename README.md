@@ -8,7 +8,7 @@ Usage
 ---
 MTProto is the Telegram's API for client applications. It requires you to obtain an `API_ID` and an `API_HASH` by visiting [my.telegram.org/apps](https://my.telegram.org/apps) and entering your own credentials. This script uses Pyrogram, a powerful MTProto implementation.
 
-Though this is a pretty simple script, it has its own headaches in setting up. If you run this script for the first time, you'll see that you'll need to log into your Telegram account, similar to any new other Telegram clients. Pyrogram caches the session and some other data in a SQLite database, stored in a file named `auto-reaction.session`. **My suggestion is to log in once into your account to create this database file, then build a docker image containing this file and then run as a docker container or normally.**
+Though this is a pretty simple script, it has its own headaches in setting up. If you run this script for the first time, you'll see that you'll need to log into your Telegram account, similar to any new other Telegram clients. Pyrogram caches the session and some other data in a SQLite database, stored in a file named `auto-reaction.session`. **My suggestion if you want to use Docker is to log in once into your account to create this database file, then build a docker image containing this file and then run as a docker container. Otherwise, run normally. Also note that you cannot have simulatenous sessions running together.**
 
 The script expects these variables to be set in the environment:
 * `API_ID`: Your Telegram API ID received via my.telegram.org
